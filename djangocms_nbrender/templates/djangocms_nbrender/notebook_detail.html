@@ -1,0 +1,22 @@
+{% extends CMS_TEMPLATE %}
+
+{% load i18n static sekizai_tags %}
+
+{% block title %}{% blocktrans with name=notebook.name %}Jupyter Notebook {{ name }}{% endblocktrans %}{% endblock %}
+
+{% block main %}
+  {% addtoblock "css" %}
+    <link rel="stylesheet" href="{% static "djangocms_nbrender/css/notebook.css" %}" media="screen" charset="utf-8">
+  {% endaddtoblock %}
+
+  {% if object.web %}
+    <p class="pull-right">
+      <a href="{{ object.web }}">
+        {% trans "Source for this notebook" %}
+      </a>
+    </p>
+  {% endif %}
+  <div class="notebook">
+    {{ object.get_html|safe }}
+  </div>
+{% endblock %}

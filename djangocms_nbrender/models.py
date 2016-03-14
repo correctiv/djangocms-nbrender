@@ -38,6 +38,11 @@ class Notebook(models.Model):
     def __str__(self):
         return self.name
 
+    @models.permalink
+    def get_absolute_url(self):
+        return ('djangocms_nbrender:djangocms_nbrender-notebook', (),
+                {'slug': self.slug})
+
     def download_and_store(self):
         if self.url:
             self.notebook.save('temp.ipynb', ContentFile(self.get_url()))
