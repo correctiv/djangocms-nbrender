@@ -25,6 +25,7 @@ class Notebook(models.Model):
     name = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255)
 
+    web = models.URLField(blank=True)
     url = models.URLField(blank=True)
     notebook = models.FileField(blank=True, upload_to=get_notebook_filename,
                                             storage=OverwriteStorage())
