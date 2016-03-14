@@ -1,5 +1,7 @@
+.notebook { margin-bottom: 15px; }
 .notebook .output_subarea { overflow: scroll; }
 .notebook .prompt { display: none; }
+.notebook table td, .notebook table th { padding: 5px; }
 
 .notebook .highlight .hll { background-color: #ffffcc }
 .notebook .highlight  { background: #f8f8f8; }
