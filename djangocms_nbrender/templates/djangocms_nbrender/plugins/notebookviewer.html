@@ -1,0 +1,9 @@
+{% load static sekizai_tags %}
+
+{% addtoblock "css" %}
+<link rel="stylesheet" href="{% static "djangocms_nbrender/css/notebook.css" %}" media="screen" charset="utf-8">
+{% endaddtoblock %}
+
+<div class="notebook">
+{{ html|safe }}
+</div>

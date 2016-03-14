@@ -1,0 +1,3 @@
+include README.md
+recursive-include djangocms_nbrender/templates *
+recursive-include djangocms_nbrender/static *
