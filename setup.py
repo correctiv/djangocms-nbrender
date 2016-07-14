@@ -36,6 +36,7 @@ setup(
         'Django',
         'django-cms',
         'nbconvert',
+        'ipython',
     ],
     include_package_data=True,
     classifiers=[
